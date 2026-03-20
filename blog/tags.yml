@@ -1,19 +1,15 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+release-notes:
+  label: Release Notes
+  description: Updates and changes to the Gravity Connect specification
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+announcement:
+  label: Announcement
+  description: News and announcements from Virtual Peaker
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+integration:
+  label: Integration
+  description: Guides and updates related to building integrations
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+certification:
+  label: Certification
+  description: Updates related to the certification testing process
