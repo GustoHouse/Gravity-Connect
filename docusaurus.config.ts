@@ -76,7 +76,7 @@ const config: Config = {
         },
         {
           to: '/blog',
-          label: 'Resources',
+          label: 'Blog',
           position: 'left',
         },
         {
