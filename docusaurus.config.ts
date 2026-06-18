@@ -54,10 +54,11 @@ const config: Config = {
   themeConfig: {
     image: 'img/social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Gravity Connect',
       logo: {
         alt: 'Gravity Connect Logo',
         src: 'img/logo.svg',
@@ -66,58 +67,61 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'guidesSidebar',
-          position: 'left',
-          label: 'Integration Guides',
+          position: 'right',
+          label: 'Guides',
         },
         {
           to: '/api',
-          label: 'Documentation',
-          position: 'left',
+          label: 'Docs',
+          position: 'right',
         },
         {
           to: '/blog',
-          label: 'Blog',
-          position: 'left',
+          label: 'Resources',
+          position: 'right',
         },
         {
           to: '/support',
           label: 'Support',
-          position: 'left',
+          position: 'right',
         },
         {
           to: '/about',
           label: 'About',
-          position: 'left',
+          position: 'right',
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
+      logo: {
+        alt: 'Gravity Connect Logo',
+        src: 'img/logo-dark.svg',
+        href: 'https://gravityconnect.com',
+        width: 255,
+        height: 47,
+      },
       links: [
-        {
-          title: 'Guides',
-          items: [
-            { label: 'Getting Started', to: '/docs/getting-started' },
-            { label: 'Authentication', to: '/docs/authentication' },
-            { label: 'Certification Testing', to: '/docs/certification' },
-          ],
-        },
-        {
-          title: 'Reference',
-          items: [
-            { label: 'API Documentation', to: '/api' },
-            { label: 'Release Notes', to: '/blog' },
-          ],
-        },
-        {
-          title: 'Company',
-          items: [
-            { label: 'About', to: '/about' },
-            { label: 'Support', to: '/support' },
-            { label: 'Virtual Peaker', href: 'https://www.virtualpeaker.com' },
-          ],
-        },
-      ],
+      {
+        label: 'Stack Overflow',
+        href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+      },
+      {
+        label: 'Discord',
+        href: 'https://discordapp.com/invite/docusaurus',
+      },
+      {
+        label: 'X',
+        href: 'https://x.com/docusaurus',
+      },
+      {
+        html: `
+            <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+              <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+            </a>
+          `,
+      },
+    ],
       copyright: `Copyright © ${new Date().getFullYear()} Virtual Peaker, Inc. All rights reserved.`,
     },
     prism: {

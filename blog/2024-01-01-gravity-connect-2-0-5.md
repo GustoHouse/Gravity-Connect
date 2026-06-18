@@ -6,7 +6,7 @@ tags: [release-notes]
 
 Gravity Connect version 2.0.5 is now available. This release includes updates to the API specification.
 
-<!-- truncate -->
+{/* truncate */}
 
 ## What's New
 

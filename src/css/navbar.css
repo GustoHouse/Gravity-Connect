@@ -1,0 +1,16 @@
+  /* VARIABLES */
+:root{
+  --ifm-navbar-background-color: var(--gc-color-black);
+  --ifm-navbar-link-color: var(--gc-color-white);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-navbar-shadow: 0 1px 0 0 var(--gc-color-black);
+  --ifm-navbar-padding-vertical: 0;
+}
+
+.navbar__inner{
+  max-width: var(--ifm-container-width-xl);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+  border-left: 1px solid var(--gc-border-grey);
+  border-right: 1px solid var(--gc-border-grey);
+}

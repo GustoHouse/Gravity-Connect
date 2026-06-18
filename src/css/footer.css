@@ -1,0 +1,9 @@
+  /* VARIABLES */
+
+  :root {
+  --ifm-footer-background-color: var(--ifm-color-primary);
+  --ifm-footer-color: var(--gc-color-black);
+  --ifm-footer-link-color: var(--gc-color-black);
+  --ifm-footer-link-hover-color: var(--ifm-color-black);
+  --ifm-footer-title-color: var(--ifm-color-black);
+  }

@@ -1,0 +1,23 @@
+:root {
+  /* Primary brand color — Gravity Yellow-Green */
+  --ifm-color-primary: #C3FF1E;
+  --ifm-color-primary-dark: #aff00a;
+  --ifm-color-primary-darker: #a5e409;
+  --ifm-color-primary-darkest: #89bc07;
+  --ifm-color-primary-light: #ccff3e;
+  --ifm-color-primary-lighter: #d1ff52;
+  --ifm-color-primary-lightest: #deff7a;
+
+  /* Brand supporting colors */
+  --gc-color-earth-clay: #BDC6AF;
+  --gc-color-grey: #D9D9D9;
+  --gc-color-black: #000000;
+  --gc-color-white: #ffffff;
+
+  /* Border colors */
+  --gc-border-grey: #3E3D3D;
+
+  /* Code blocks */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(195, 255, 30, 0.15);
+}
