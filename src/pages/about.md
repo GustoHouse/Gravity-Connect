@@ -1,10 +1,11 @@
 ---
 title: About
+
+banner:
+    title: About Gravity Connect
+    desc: Gravity Connect is an open standard developed by Virtual Peaker for integrations between DERMS/VPP platforms and DER OEMs.
 ---
 
-# About Gravity Connect
-
-Gravity Connect is an open standard developed by Virtual Peaker for integrations between DERMS/VPP platforms and DER OEMs.
 
 ## History
 

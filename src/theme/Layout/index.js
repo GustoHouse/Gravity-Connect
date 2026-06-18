@@ -1,7 +1,6 @@
 import React from 'react';
-import clsx from 'clsx';
 import Layout from '@theme-original/Layout';
-import Link from '@docusaurus/Link';
+import PageBanner from '@site/src/components/PageBanner';
 import {usePageBanner} from '@site/src/contexts/pageBanner';
 
 export default function LayoutWrapper(props) {
@@ -10,19 +9,7 @@ export default function LayoutWrapper(props) {
 
   return (
     <Layout {...rest}>
-      {banner && (
-        <div>
-            <h1>{banner.title}</h1>
-            {banner.desc && <p >{banner.desc}</p>}
-            {banner.button && banner.link && (
-              <Link
-                className='button button--primary button--lg'
-                to={banner.link}>
-                {banner.button}
-              </Link>
-            )}
-        </div>
-      )}
+      {banner && <PageBanner {...banner} />}
       {children}
     </Layout>
   );
