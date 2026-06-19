@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 
-import './PageBanner.css';
+import './banner.css';
 
 const PLACEHOLDER_TITLE = 'No page title found';
 
