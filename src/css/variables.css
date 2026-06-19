@@ -1,4 +1,10 @@
 :root {
+
+  /* Global Overrides */
+  --ifm-global-spacing: 2rem;
+  --ifm-toc-border-color: transparent;
+  --ifm-button-color: var(--gc-color-black);
+
   /* Primary brand color — Gravity Yellow-Green */
   --ifm-color-primary: #C3FF1E;
   --ifm-color-primary-dark: #aff00a;
@@ -20,4 +26,5 @@
   /* Code blocks */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(195, 255, 30, 0.15);
+  
 }

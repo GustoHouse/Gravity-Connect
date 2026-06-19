@@ -17,13 +17,10 @@ export function usePageBanner() {
   return ctx ? ctx.banner : null;
 }
 
-// Set the banner for the current page, clearing it automatically on unmount
-// (e.g. when navigating to another page). Pass null for pages with no banner.
+// Set the banner for the current page, clearing it on unmount.
 export function useSetPageBanner(banner) {
   const ctx = useContext(PageBannerContext);
   const setBanner = ctx && ctx.setBanner;
-  // Stable dependency: only re-run when the banner's contents actually change,
-  // not on every render (the object identity changes each render).
   const key = banner ? JSON.stringify(banner) : null;
   useEffect(() => {
     if (!setBanner) {
@@ -35,15 +32,14 @@ export function useSetPageBanner(banner) {
   }, [key, setBanner]);
 }
 
-// Normalizes the nested `banner:` frontmatter object into the shape the slot
-// renders. Returns null when a page hasn't opted in (no banner.title).
+// Always returns a banner object, so the banner renders on every page.
+// Title resolves in order: banner.title  ->  the page's frontmatter `title:`
+//  ->  null (the component then shows a placeholder).
 export function bannerFromFrontMatter(frontMatter) {
-  const b = frontMatter && frontMatter.banner;
-  if (!b || !b.title) {
-    return null;
-  }
+  const fm = frontMatter || {};
+  const b = fm.banner || {};
   return {
-    title: b.title,
+    title: b.title ?? fm.title ?? null,
     desc: b.desc ?? null,
     button: b.button ?? null,
     link: b.link ?? null,

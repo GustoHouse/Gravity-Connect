@@ -24,6 +24,14 @@ const config: Config = {
     locales: ['en'],
   },
 
+  headTags: [
+    {
+      tagName: 'style',
+      attributes: {},
+      innerHTML: '@layer overrides, docusaurus;',
+    },
+  ],
+
   presets: [
     [
       'classic',
@@ -34,7 +42,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
-          blogSidebarTitle: 'Recent posts',
+          blogSidebarTitle: 'Recent Posts',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -102,26 +110,19 @@ const config: Config = {
         height: 47,
       },
       links: [
-      {
-        label: 'Stack Overflow',
-        href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      },
-      {
-        label: 'Discord',
-        href: 'https://discordapp.com/invite/docusaurus',
-      },
-      {
-        label: 'X',
-        href: 'https://x.com/docusaurus',
-      },
-      {
-        html: `
-            <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-              <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
-            </a>
-          `,
-      },
-    ],
+        {
+          label: 'Link',
+          href: '/',
+        },
+        {
+          label: 'Link',
+          href: '/',
+        },
+        {
+          label: 'Link',
+          href: '/',
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Virtual Peaker, Inc. All rights reserved.`,
     },
     prism: {

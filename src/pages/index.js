@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
@@ -13,10 +12,11 @@ export default function Home() {
       description="Gravity Connect is an open standard for connecting distributed energy resources to utility programs through a single API.">
       <main>
         <PageBanner 
-          title="One integration. Every grid program."
-          desc="Publish device data and respond to grid events through a single API."
-          button="Start building"
+          title="The Open Standard for VPP & OEM Integrations"
+          desc="Connect a DER flee to dozens of utility programs with one integration, powering reliable demand response with near-real-time control and visibility."
+          button="Get Started"
           link="/docs/getting-started"
+          className='HomeBanner'
         />
       </main>
     </Layout>

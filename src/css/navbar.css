@@ -1,16 +1,29 @@
   /* VARIABLES */
 :root{
-  --ifm-navbar-background-color: var(--gc-color-black);
+  --ifm-navbar-background-color: transparent;
   --ifm-navbar-link-color: var(--gc-color-white);
   --ifm-navbar-link-hover-color: var(--ifm-color-primary);
-  --ifm-navbar-shadow: 0 1px 0 0 var(--gc-color-black);
+  --ifm-navbar-shadow: none;
   --ifm-navbar-padding-vertical: 0;
 }
 
+nav{
+  padding:0;
+}
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+}
+
 .navbar__inner{
-  max-width: var(--ifm-container-width-xl);
+  max-width: var(--ifm-container-width);
   margin: 0 auto;
   padding: 0 var(--ifm-spacing-horizontal);
-  border-left: 1px solid var(--gc-border-grey);
-  border-right: 1px solid var(--gc-border-grey);
+
+  @media (min-width: 1440px) {
+    max-width: var(--ifm-container-width-xl);
+  }
 }
