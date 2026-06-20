@@ -1,0 +1,37 @@
+.colorband{
+    position: relative;
+    padding-block:var(--gc-padding-vertical);
+    margin-block:var(--gc-margin-vertical);
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 200vw;
+        height: 100%;
+        left: -50vw;
+        z-index: -1;
+        top:0;
+    }
+
+    &.colorband--grey{
+        &:before{
+            background: var(--gc-color-earth-clay);
+        }
+    }
+
+    &.colorband--black{
+        color:white;
+        
+        &:before{
+            background-color:black;
+        }
+    }
+
+    &.colorband--green{
+        &:before{
+            background: var(--ifm-color-primary);
+        }
+    }
+
+}

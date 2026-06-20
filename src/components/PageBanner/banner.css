@@ -9,6 +9,26 @@
         background-size: 132px;
     }
 
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 300px;
+        width: 100%;
+        background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &.HomeBanner{
+        .container{
+            .row{
+                padding-top: calc(12vh + 60px);
+                padding-bottom: 17vh;
+            }
+        }
+    }
+
     .container{
         padding-top: 60px;
         border-left:1px solid var(--gc-border-grey);
@@ -19,26 +39,6 @@
         .row{
             padding-top: calc(5vh + 60px);
             padding-bottom: 7vh;
-        }
-    }
-}
-
-.banner:before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 300px;
-    width: 100%;
-    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.banner.HomeBanner{
-    .container{
-        .row{
-            padding-top: calc(12vh + 60px);
-            padding-bottom: 17vh;
         }
     }
 }

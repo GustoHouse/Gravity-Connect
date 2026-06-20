@@ -1,0 +1,9 @@
+html, body{
+    overflow-x: hidden;
+}
+
+.col{
+    .col{
+        padding-inline:0px;
+    }
+}
