@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 
 import './banner.css';
-
 const PLACEHOLDER_TITLE = 'No page title found';
 
 export default function PageBanner({title, desc, button, link, children, className}) {

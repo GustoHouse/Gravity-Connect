@@ -7,23 +7,45 @@
   --ifm-navbar-padding-vertical: 0;
 }
 
-nav{
+#__docusaurus > nav.navbar{
   padding:0;
-}
-
-.navbar{
+  background:black;
   position:fixed;
   top:0;
   left:0;
-  width:100%;
+  width:100vw;
+
+  .navbar__inner{
+    margin: 0 auto;
+    padding: 0 var(--ifm-spacing-horizontal);
+  }
 }
 
-.navbar__inner{
-  max-width: var(--ifm-container-width);
-  margin: 0 auto;
-  padding: 0 var(--ifm-spacing-horizontal);
 
-  @media (min-width: 1440px) {
-    max-width: var(--ifm-container-width-xl);
+.home-page{
+  #__docusaurus > nav{
+    background:transparent;
+
+    .navbar__inner{
+      max-width: var(--ifm-container-width);
+
+      @media (min-width: 1440px) {
+        max-width: var(--ifm-container-width-xl);
+      }
+    }
   }
+}
+
+.scrolled{
+  #__docusaurus > nav{
+    background:black;
+  }
+}
+
+.navbar__toggle{
+  color: white;
+}
+
+.navbar-sidebar{
+  background:black;
 }

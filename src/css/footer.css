@@ -7,4 +7,5 @@
   --ifm-footer-link-hover-color: var(--ifm-color-black);
   --ifm-footer-title-color: var(--ifm-color-black);
   --ifm-footer-padding-vertical: 0;
+  --ifm-footer-padding-horizontal: 0;
   }

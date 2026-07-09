@@ -1,6 +1,5 @@
 .colorband{
     position: relative;
-    padding-block:var(--gc-padding-vertical);
     margin-block:var(--gc-margin-vertical);
 
     &:before{
@@ -26,11 +25,21 @@
         &:before{
             background-color:black;
         }
+
+        h1,h2,h3,h4{
+            color: var(--gc-color-earth-clay);
+        }
     }
 
     &.colorband--green{
         &:before{
             background: var(--ifm-color-primary);
+        }
+    }
+
+    .container{
+        .row{
+            padding-block:var(--gc-padding-vertical);
         }
     }
 

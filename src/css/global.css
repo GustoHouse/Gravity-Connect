@@ -1,9 +1,35 @@
+:root {
+  --ifm-font-family-base: "articulat-cf", sans-serif;
+}
+
 html, body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .col{
     .col{
         padding-inline:0px;
     }
+}
+
+#__docusaurus{
+    padding-top:60px;
+}
+
+.home-page{
+    #__docusaurus{
+        padding-top:0px;
+    }
+}
+
+/* Text Styles */
+
+p{
+    letter-spacing: .75px;
+    max-width:800px;
+}
+
+p.callout{
+    font-size:24px;
+    line-height: 1.3;
 }

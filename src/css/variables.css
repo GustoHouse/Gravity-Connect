@@ -31,4 +31,7 @@
   --gc-padding-vertical: calc(7.5vh + 45px);
   --gc-margin-vertical: calc(3vh + 45px);
 
+  /* Headings */
+  --ifm-heading-font-weight: 500;
+
 }

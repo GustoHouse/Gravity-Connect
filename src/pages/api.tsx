@@ -1,15 +1,10 @@
 import React from 'react';
-import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-
-import PageBanner from '@site/src/components/PageBanner';
+import Layout from '@theme/Layout';
 
 export default function ApiReference() {
   return (
-    <Layout title="API Documentation" description="Gravity Connect API Reference">
-      
-      <PageBanner title="Gravity Connect API" />
-
+    <Layout>
       <BrowserOnly fallback={<div style={{padding: '2rem'}}>Loading API reference…</div>}>
         {() => {
           const {RedocStandalone} = require('redoc');

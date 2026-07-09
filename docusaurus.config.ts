@@ -30,6 +30,13 @@ const config: Config = {
       attributes: {},
       innerHTML: '@layer overrides, docusaurus;',
     },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://use.typekit.net/fpd5hqq.css',
+      },
+    },
   ],
 
   presets: [
