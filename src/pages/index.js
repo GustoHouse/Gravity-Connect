@@ -1,14 +1,17 @@
 import React, {useEffect} from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import PageBanner from '@site/src/components/PageBanner';
-import ColorBand from '@site/src/components/ColorBand';
+import Band from '@site/src/components/Band';
 import Grid from '@site/src/components/Grid';
 import Block from '@site/src/components/Grid/block';
 import Cards from '@site/src/components/Cards';
 import Card from '@site/src/components/Cards/card';
+import FeatureSelector from '@site/src/components/FeatureSelector';
+import FeatureSelectorItem from '@site/src/components/FeatureSelector/item';
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -19,17 +22,15 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const scroller = document.body;
-
     const onScroll = () => {
-      document.body.classList.toggle('scrolled', scroller.scrollTop > 50);
+      document.body.classList.toggle('scrolled', window.scrollY > 50);
     };
 
     onScroll();
-    scroller.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('scroll', onScroll, {passive: true});
 
     return () => {
-      scroller.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', onScroll);
       document.body.classList.remove('scrolled');
     };
   }, []);
@@ -49,13 +50,13 @@ export default function Home() {
           className='HomeBanner'
         />
 
-        <ColorBand color='grey'>
+        <Band color='grey'>
 
           <h5>VPPs and Demand Response Programs</h5>
           <p className='callout'>Integrating with Demand Response programs means integrating with each VPP and DERMS vendor operating those programs.</p>
           <p className='callout'>Gravity Connect OEM partners are compatible with an array of programs managed by VPP partners.</p>
 
-        </ColorBand>
+        </Band>
 
 
         <Grid title="Why Gravity Connect">
@@ -100,7 +101,7 @@ export default function Home() {
           </Card>
         </Cards>
 
-        <ColorBand 
+        <Band
           color='black'
           image={useBaseUrl('/img/certified.png')}
         >
@@ -116,8 +117,33 @@ export default function Home() {
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit maecenas vel ant.</li>
           </ul>
 
-        </ColorBand>
+        </Band>
 
+        <FeatureSelector title="Why It's Better">
+          <FeatureSelectorItem headline="Purpose-built" image={useBaseUrl('/img/flexible.png')}>
+            <p>Gravity Connect is designed for every aspect of VPP-OEM integrations, from enrollment to commands.</p>
+          </FeatureSelectorItem>
+          <FeatureSelectorItem headline="Quickly scalable" image={useBaseUrl('/img/compatible.png')}>
+            <p>Integrate once to join a growing network of OEMs and programs, without rebuilding for each new partner.</p>
+          </FeatureSelectorItem>
+          <FeatureSelectorItem headline="Rapidly responsive" image={useBaseUrl('/img/reliable.png')}>
+            <p>Near-real-time control and visibility keep commands and telemetry moving with minimal latency.</p>
+          </FeatureSelectorItem>
+        </FeatureSelector>
+
+        <Band background={useBaseUrl('/img/join.png')}>
+
+          <h2>Join our efficient, sustainable energy ecosystem</h2>
+          <p>Access the guides or dive into the documentation.</p>
+
+          <Link className='button button--outline button--lg margin-right--md' to='/docs/getting-started'>
+            Go to Guides
+          </Link>
+          <Link className='button button--outline button--lg' to='/api'>
+            Read the Docs
+          </Link>
+
+        </Band>
 
       </main>
 

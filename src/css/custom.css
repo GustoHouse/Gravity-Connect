@@ -4,4 +4,7 @@
 @import './footer.css';
 @import './home.css';
 @import './blog.css';
+@import './docs.css';
+@import './api.css';
+@import './resources.css';
 @import './overrides.css';

@@ -1,10 +1,14 @@
 import React from 'react';
+import clsx from 'clsx';
 
-import './colorband.css';
+import './band.css';
 
-export default function ColorBand({color, image, children}) {
+export default function Band({color, background, image, children}) {
   return (
-    <section className={`colorband ${color ? `colorband--${color}` : ''}`}>
+    <section
+      className={clsx('band', color && `band--${color}`, background && 'band--background')}
+      style={background ? {'--band-background-image': `url(${background})`} : undefined}
+    >
         <div className="container">
             <div className="row">
                 {image ? (
@@ -26,9 +30,3 @@ export default function ColorBand({color, image, children}) {
     </section>
   );
 }
-
-
-
-
-
-

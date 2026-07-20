@@ -20,6 +20,15 @@
   --gc-color-black: #000000;
   --gc-color-white: #ffffff;
 
+  /* In-content link color: the brand yellow-green fails text contrast on
+     white (even --ifm-color-primary-darkest is only ~2:1), so links use a
+     darkened shade of the same hue instead. Hover goes to plain black —
+     no need for a brand-color hover treatment, the underline already marks
+     it as a link. --ifm-color-primary itself is untouched — this only
+     affects link color, not buttons, active nav states, etc. */
+  --ifm-link-color: #527000;
+  --ifm-link-hover-color: var(--gc-color-black);
+
   /* Border colors */
   --gc-border-grey: #3E3D3D;
 

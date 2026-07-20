@@ -2,7 +2,7 @@
   --ifm-font-family-base: "articulat-cf", sans-serif;
 }
 
-html, body{
+html{
     overflow-x: hidden !important;
 }
 
@@ -13,12 +13,22 @@ html, body{
 }
 
 #__docusaurus{
-    padding-top:60px;
+    padding-top:84px;
 }
 
 .home-page{
     #__docusaurus{
         padding-top:0px;
+    }
+}
+
+/* Redoc's right panel is a solid black column starting right at the top of
+   its content — the extra 24px gap that's right elsewhere on the site reads
+   as an awkward seam between it and the black navbar above. Keep just the
+   60px needed to clear the fixed navbar. */
+.api-page{
+    #__docusaurus{
+        padding-top:60px;
     }
 }
 

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nohup npm run start -- --port 3005)",
+      "Bash(disown)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3005/Gravity-Connect/)",
+      "Bash(npm ls *)",
+      "Bash(where.exe chrome.exe)",
+      "Bash(where.exe msedge.exe)"
+    ]
+  }
+}

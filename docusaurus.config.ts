@@ -45,7 +45,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/GustoHouse/Gravity-Connect/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -54,7 +53,6 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/GustoHouse/Gravity-Connect/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -118,16 +116,24 @@ const config: Config = {
       },
       links: [
         {
-          label: 'Link',
-          href: '/',
+          label: 'Guides',
+          to: '/docs/getting-started',
         },
         {
-          label: 'Link',
-          href: '/',
+          label: 'Docs',
+          to: '/api',
         },
         {
-          label: 'Link',
-          href: '/',
+          label: 'Resources',
+          to: '/blog',
+        },
+        {
+          label: 'Support',
+          to: '/support',
+        },
+        {
+          label: 'About',
+          to: '/about',
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Virtual Peaker, Inc. All rights reserved.`,
